@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="hello_i_am_under_the_water">Hello, I am under the water</string>
+</resources>

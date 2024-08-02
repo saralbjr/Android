@@ -1,0 +1,54 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:id="@+id/main"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Main Content Box -->
+    <TextView
+        android:id="@+id/parent"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@color/teal_700"
+        android:text="@string/hello_i_am_under_the_water"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_margin="16dp"/>
+
+    <!-- Box Above Main Content -->
+    <TextView
+        android:id="@+id/black"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@color/black"
+        android:layout_above="@id/parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Top Box Above Black Box -->
+    <TextView
+        android:id="@+id/top_box"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:background="@color/purple_700"
+        android:layout_above="@id/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Box to the Left of the Black Box -->
+    <TextView
+        android:id="@+id/left_box"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@color/purple_700"
+        android:layout_toLeftOf="@id/black"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"/>
+
+</RelativeLayout>
