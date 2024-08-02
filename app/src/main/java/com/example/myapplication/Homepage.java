@@ -100,6 +100,15 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        // Setup button to navigate to CustomListView
+        Button customlistviewButton = findViewById(R.id.Customlistview);
+        customlistviewButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "Customlistview button clicked");
+                Intent intent = new Intent(Homepage.this, CustomListExample.class);
+                startActivity(intent);
+            }
+        });
     }
 }
