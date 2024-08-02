@@ -26,10 +26,10 @@ public class CustomListExample extends AppCompatActivity {
         };
         int[] image = {
                 R.drawable.firstimg,
+                R.drawable.batman,
                 R.drawable.firstimg,
-                R.drawable.firstimg,
-                R.drawable.firstimg,
-                R.drawable.firstimg
+                R.drawable.dark,
+                R.drawable.breakingbad
         };
 
         MyListAdapter adapter = new MyListAdapter(this, title, description, image);

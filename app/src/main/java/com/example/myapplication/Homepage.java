@@ -110,5 +110,25 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // Setup button to navigate to GridView
+        Button gridviewButton = findViewById(R.id.Gridview);
+        gridviewButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "Gridview button clicked");
+                Intent intent = new Intent(Homepage.this, GridViewExample.class);
+                startActivity(intent);
+            }
+        });
+        // Setup button to navigate to CustomGridView
+        Button customgridviewButton = findViewById(R.id.Customgridview);
+        customgridviewButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "Customgridview button clicked");
+                Intent intent = new Intent(Homepage.this, CustomGridExample.class);
+                startActivity(intent);
+            }
+        });
     }
 }
