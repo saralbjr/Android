@@ -68,6 +68,11 @@
             android:layout_height="wrap_content"
             android:text="Custom Gridview"
             android:id="@+id/Customgridview"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Option"
+            android:id="@+id/option"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,13 +6,12 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:src="@drawable/firstimg"
-        android:layout_centerHorizontal="true"
         android:id="@+id/image"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:textSize="20dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/title"
         android:layout_below="@+id/image"
         android:textStyle="bold"
@@ -22,10 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/description"
         android:layout_below="@+id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:textStyle="bold"
         android:text="Description here"/>
 </RelativeLayout>

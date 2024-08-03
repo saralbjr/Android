@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Option"
+            android:exported="false" />
+        <activity
             android:name=".CustomGridExample"
             android:exported="false" />
         <activity
@@ -35,9 +38,6 @@
         </activity>
         <activity
             android:name=".InputText"
-            android:exported="false" />
-        <activity
-            android:name=".Spinner"
             android:exported="false" />
         <activity
             android:name=".ConstraintLayout"

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/main"
+     android:orientation="vertical"
+     android:padding="16dp"
+     android:background="#f5f5f5"
+     tools:context=".MainActivity">
+
+<!-- Title -->
+<TextView
+    android:layout_marginTop="80dp"
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Football Jersey"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:paddingBottom="16dp"
+    android:textColor="#333333" />
+
+<!-- Radio Buttons -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Select Player:"
+    android:textSize="18sp"
+    android:paddingBottom="8dp"
+    android:textColor="#555555" />
+
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <RadioButton
+        android:id="@+id/radio_option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ronaldo"
+        android:textColor="#333333" />
+
+    <RadioButton
+        android:id="@+id/radio_option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Messi"
+        android:textColor="#333333" />
+</RadioGroup>
+
+<!-- Checkboxes -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Role:"
+    android:textSize="18sp"
+    android:paddingBottom="8dp"
+    android:textColor="#555555" />
+
+<CheckBox
+    android:id="@+id/checkbox_preference1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="CDM"
+    android:textColor="#333333"
+    android:paddingBottom="8dp" />
+
+<CheckBox
+    android:id="@+id/checkbox_preference2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="RW"
+    android:textColor="#333333"
+    android:paddingBottom="8dp" />
+
+<!-- Spinner -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Choose Jersey no:"
+    android:textSize="18sp"
+    android:paddingBottom="8dp"
+    android:textColor="#555555" />
+
+<Spinner
+    android:id="@+id/spinner_numbers"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:background="@drawable/spinner_background" />
+
+<!-- Submit Button -->
+<Button
+    android:id="@+id/submit_button"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:text="Submit"
+    android:textColor="#ffffff"
+    android:background="@color/purple_700"
+    android:padding="12dp"
+    android:layout_gravity="center"
+    android:textSize="18sp" />
+</LinearLayout>

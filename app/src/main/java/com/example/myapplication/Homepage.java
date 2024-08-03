@@ -130,5 +130,15 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // 1setup button to navigate to Option
+        Button optionButton = findViewById(R.id.option);
+        optionButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "option button clicked");
+                Intent intent = new Intent(Homepage.this, Option.class);
+                startActivity(intent);
+            }
+        });
     }
 }
