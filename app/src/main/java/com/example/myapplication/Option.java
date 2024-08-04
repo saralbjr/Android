@@ -65,7 +65,7 @@ public class Option extends AppCompatActivity {
                 String selectedNumber = spinnerNumbers.getSelectedItem().toString();
 
                 // Display selected values as a toast message
-                Toast.makeText(Option.this, "1: " + selectedOption + "\n2: " + preferences.toString() + "\n3: " + selectedNumber, Toast.LENGTH_LONG).show();
+                Toast.makeText(Option.this, "1: " + selectedOption + "2: " + preferences.toString() + "\n3: " + selectedNumber, Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -140,5 +140,24 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // 1setup button to navigate to FormData
+        Button formdataButton = findViewById(R.id.formdata);
+        formdataButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "option button clicked");
+                Intent intent = new Intent(Homepage.this, FormData.class);
+                startActivity(intent);
+            }
+        });
+        //setup button to navigate to calculator page
+        Button calculatorButton = findViewById(R.id.calculator);
+        calculatorButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent (Homepage.this, Calculator.class);
+                startActivity(intent);
+            }
+        });
     }
 }

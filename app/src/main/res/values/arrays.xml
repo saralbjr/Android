@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="program_array">
+        <item>Bca</item>
+        <item>Bba</item>
+        <item>Bit</item>
+    </string-array>
+</resources>

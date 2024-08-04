@@ -73,6 +73,17 @@
             android:layout_height="wrap_content"
             android:text="Option"
             android:id="@+id/option"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="FormData"
+            android:id="@+id/formdata"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Calculator"
+            android:id="@+id/calculator"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
