@@ -159,5 +159,15 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //setup button to navigate to crud app
+        Button crudButton = findViewById(R.id.crud);
+        crudButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent (Homepage.this, sqliteExample.class);
+                startActivity(intent);
+            }
+        });
     }
 }
