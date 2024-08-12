@@ -41,6 +41,7 @@
         android:text="Add"
         android:layout_below="@id/inputFullName"
         android:layout_marginLeft="16dp"
+        android:backgroundTint="@color/green"
         android:layout_marginRight="16dp"
         android:id="@+id/btnAdd"/>
     <Button
@@ -54,10 +55,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="Delete"
         android:layout_below="@id/btnEdit"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:backgroundTint="@color/red"
         android:id="@+id/btnDelete"/>
     <TextView
         android:id="@+id/data"

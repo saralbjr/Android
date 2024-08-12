@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class sqliteExample extends AppCompatActivity {
     private EditText inputId, inputFullName;
-    private Button btnAdd;
+    private Button btnAdd, btnEdit, btnDelete;
     private TextView data;
     private MyDbHelper dbHelper;
 
@@ -26,38 +26,85 @@ public class sqliteExample extends AppCompatActivity {
         inputId = findViewById(R.id.inputId);
         inputFullName = findViewById(R.id.inputFullName);
         btnAdd = findViewById(R.id.btnAdd);
+        btnEdit = findViewById(R.id.btnEdit);
+        btnDelete = findViewById(R.id.btnDelete);
         data = findViewById(R.id.data);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Get input values
-                String idText = inputId.getText().toString();
-                String name = inputFullName.getText().toString();
+                addUser();
+            }
+        });
 
-                if (idText.isEmpty() || name.isEmpty()) {
-                    Toast.makeText(sqliteExample.this, "Please enter both ID and Name", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editUser();
+            }
+        });
 
-                int id = Integer.parseInt(idText);
-
-                // Add to database
-                dbHelper.addUser(id, name);
-
-                // Show success message
-                Toast.makeText(sqliteExample.this, "User added successfully", Toast.LENGTH_SHORT).show();
-
-                // Clear input fields
-                inputId.setText("");
-                inputFullName.setText("");
-
-                // Update TextView with data from database
-                updateDataDisplay();
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteUser();
             }
         });
 
         // Initial load of data
+        updateDataDisplay();
+    }
+
+    private void addUser() {
+        String idText = inputId.getText().toString();
+        String name = inputFullName.getText().toString();
+
+        if (idText.isEmpty() || name.isEmpty()) {
+            Toast.makeText(sqliteExample.this, "Please enter both ID and Name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int id = Integer.parseInt(idText);
+        dbHelper.addUser(id, name);
+
+        Toast.makeText(sqliteExample.this, "User added successfully", Toast.LENGTH_SHORT).show();
+        inputId.setText("");
+        inputFullName.setText("");
+        updateDataDisplay();
+    }
+
+    private void editUser() {
+        String idText = inputId.getText().toString();
+        String name = inputFullName.getText().toString();
+
+        if (idText.isEmpty() || name.isEmpty()) {
+            Toast.makeText(sqliteExample.this, "Please enter both ID and Name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int id = Integer.parseInt(idText);
+        dbHelper.updateUser(id, name);
+
+        Toast.makeText(sqliteExample.this, "User updated successfully", Toast.LENGTH_SHORT).show();
+        inputId.setText("");
+        inputFullName.setText("");
+        updateDataDisplay();
+    }
+
+    private void deleteUser() {
+        String idText = inputId.getText().toString();
+
+        if (idText.isEmpty()) {
+            Toast.makeText(sqliteExample.this, "Please enter an ID", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int id = Integer.parseInt(idText);
+        dbHelper.deleteUser(id);
+
+        Toast.makeText(sqliteExample.this, "User deleted successfully", Toast.LENGTH_SHORT).show();
+        inputId.setText("");
+        inputFullName.setText("");
         updateDataDisplay();
     }
 
@@ -85,5 +132,4 @@ public class sqliteExample extends AppCompatActivity {
             data.setText(sb.toString());
         }
     }
-
 }
